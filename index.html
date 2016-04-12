@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Segunda aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/app2.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/engrillados.jpg','imagenes/tapete.jpg','imagenes/atlixco.jpg','imagenes/atlixco1.jpg','imagenes/atlixco3.jpg')">
+<div data-role="page" id="Principal" data-theme="b">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+   <h1>Semana Santa</h1>
+  </div>
+  <center><div><center><img src="imagenes/fotosemanasanta.jpg" width="500" height="300"></center></div></center>
+     <div>
+        <ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-a">
+         <li class="ui-first-child ui-last-child">
+            <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+            <h2>¿Qué significa la Semana Santa?</h2>
+            </a>
+         </li>
+        <li class="ui-first-child ui-last-child">
+          <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <h2>Domingo de Pascua</h2>
+          </a>
+        </li>
+        <li class="ui-first-child ui-last-child">
+          <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <h2>¿Cómo se establece la Semana Santa?</h2>
+          </a>
+        </li>
+        <li class="ui-first-child ui-last-child">
+          <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <h2>Celebración de la Semana Santa en Atlixco</h2>
+          </a>
+        </li>
+        <li class="ui-first-child ui-last-child">
+          <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <h2>Semana Santa en Iztapalapa</h2>
+          </a>
+        </li>
+        <li class="ui-first-child ui-last-child">
+          <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <h2>Semana Santa en el Vaticano</h2>
+          </a>
+        </li>
+        <li class="ui-first-child ui-last-child">
+          <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <h2>Semana Santa en Jerusalén</h2>
+          </a>
+        </li>
+        <li class="ui-first-child ui-last-child">
+          <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+          <h2>Semana Santa en Chihuahua</h2>
+          </a>
+        </li>
+   </ul>
+</div>
+  <div data-role="footer" align="center" data-theme="a">
+    <div>
+      <img src="imagenes/persona_rosa.png" width="56" height="46">
+    </div>
+      <div>
+         <h4>Aplicacion dos</h4>
+           <h4>Loreli Ponce Ayala.</h4>
+   </div>
+ </div>
+</div>
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1>Semana Santa</h1>
+  </div>
+  <div data-role="content">
+    <div>
+    <h2>El significado de la Semana Santa</h2>
+    <p>Conocida como semana mayor, es un período de 7 días que comienza con el Domingo de Ramos y culmina con el Domingo de Resurrección. Con la Semana Santa, el cristiano conmemora el Triduo Pascual, es decir, los momentos de la Pasión, la Muerte y la Resurrección de Jesucristo.</p>
+<center>
+<img src="imagenes/cruz.jpg"  width="400" height="300">
+</center>
+<br>
+<h2>Domingo de Ramos</h2>
+<p>
+El Domingo de Ramos es aquel en el que los cristianos conmemoran la entrada de Jesús de Nazaret en Jerusalén, aclamado por una multitud exultante, días antes de su pasión, muerte y resurrección</p>
+<center><img  src="imagenes/domingo.jpg"  width="400" height="300"></center>
+<br>
+<h2>Jueves Santo</h2>
+<p>Como tal, el Jueves Santo celebra la última cena de Jesús de Nazaret con sus discípulos, la institución de la eucaristía, la orden sacerdotal y, el lavatorio de pies. En este día, los católicos realizan la visita de los siete templos o iglesias, con el objetivo de agradecer a Dios el don de la eucaristía y sacerdocio.</p>
+<center><img src="imagenes/jueves.jpg" width="150" height="150">
+<br>
+<h2>Viernes Santo</h2>
+<p>El Viernes Santo, recuerda la Pasión de Cristo, momento de su crucifixión en el Calvario, por salvar al hombre del pecado y darle vida entera. Se celebra con un viacrucis y con la adoración de la Cruz.</p>
+<center><img src="imagenes/viernes.jpg"></center>
+<br>
+<h2>Sábado Santo</h2>
+<p>Se conoce como sábado santo el día entre la muerte y la resurrección de Jesús. En este día, se lleva a cabo una vigilia pascual, en la cual se acostumbra bendecir el agua y encender las velas en señal de la Resurrección de Jesús.</p>
+<br>
+<center><img src="imagenes/sabado.jpg"  width="400" height="300"></center>
+    </div>
+  </div>
+    <div data-role="main" class="ui-content">
+   <div data-role="collapsible" data-content-theme="false">
+     <h1>Mas informacion</h1>
+     <div>
+     <br>
+     <p>La Semana Santa está precedida por la Cuaresma que se refiere al tiempo de preparación donde se recuerda los 40 días de Jesucristo en el desierto.Durante los viernes de la cuaresma no se puede comer carne. La semana coincide en el antigua calendario indígena, con el mes de Hueytozoztli.En el domingo de ramos se celebra en varias partes de la república con hojas de palma.Antes en el sabado de gloria se celebraba mojando a todo aquel que se atravesara.</p>
+  </div>
+     </div>
+     </div>
+   <div data-role="footer" data-theme="a">
+     <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+   </div>
+  </div>
+</div>
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Domingo de Pascua</h1>
+   </div>
+   <div data-role="content">
+      <div>
+        <h2>¿Qué es el domingo de Pascua?</h2></div>
+        <p>Pascua es la celebración más importante de la Iglesia Cristiana, donde se conmemora la Resurección de Jesucristo, al tercer día después de haber sido crucificado, según los evangelios canónicos.La Pascua forma parte de la semana santa donde el "Viernes Santo" se celebra la crucifixión de Jesús, y en el "Domingo de Pascua" es una fiesta móvil, el día varía cada año y no se fija en la relación al calendario civil, y sucede despues de la primera luna llena en el principio de la primavera en el hemisferio norte. La pascua siempre se celbra entre el 22 de Marzo y el 25 de Abril, se celebra en varios países y en cada uno posee un nombre diferente.</p>
+        <center><img src="imagenes/domingo.jpg"></center>
+      </div>
+          <div data-role="main" class="ui-content">
+   <div data-role="collapsible" data-content-theme="false">
+     <h1>Mas Informacion</h1>
+     <div>
+     <br>
+     <p>El Domingo de Pascua es una celebración que no se fija en relación al calendario civil. El Primer Concilio de Nicea (año 325) estableció la fecha de la Pascua como el primer domingodespués de la luna llena tras el equinoccio de primavera en el hemisferio norte.Tambien se celebra al conejo de pascua que deja huevos ocultos que estan pintados y coloridos.La expresión "¡Felices Pascuas!" es una forma tradicional de felicitar la Navidad, el nacimiento deJesuscristo</p>
+  </div>
+     </div>
+     </div>
+      <div data-role="footer" data-theme="a">
+         <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+      </div>
+     </div>
+</div> 
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>¿Cómo se establece la semana santa?</h1>
+  </div>
+  <div data-role="content">
+    <div>
+       <h2>¿Cómo se establece?</h2></div>
+       <p>Probablemente usted habrá notado que la fecha de la Semana Santa varía considerablemente de un año al siguiente. Esta fecha se escoge a partir de una fórmula establecida por el Emperador Romano Constantino el Grande y el Concilio de Nicea en 325 d. C. Usted puede usar la fórmula para verificar la fecha de Pascua cada año. En primer lugar debe hallar el equinocio vernal, o primer día de primavera ( alrededor del 21- 22 de marzo ), en un calendario que incluya datos astronómicos básicos. Después busque la siguiente luna llena, normalmente está indicada en una esquina del calendario. La Semana Santa caerá el domingo siguiente.
+
+De acuerdo con esta regla, la fecha más tardía posible para Semana Santa sería el 25 de Abril, la próxima ocurrencia será en 2038. La más temprana el 22 de Marzo, en 2285. La mayoría de las veces, la Semana Santa cae durante la primera semana de Abril.</p>
+    </div>
+        <div data-role="main" class="ui-content">
+   <div data-role="collapsible" data-content-theme="false">
+     <h1>Mas informacion</h1>
+     <div>
+     <br>
+     <p>Los dias santos son: Domingo de ramos, jueves santo, viernes santo, sabado santo y domingo de pascua. Para vivir la semana santa debemos darle a Dios el primer lugar y participar en toda la riqueza de las celebraciones propias de este tiempo litúrgico</p>
+  </div>
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+      <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+    </div>
+   </div>
+</div> 
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Celebracion de la Semana santa en Atlixco</h1>
+  </div>
+  <div data-role="content">
+    <div>
+       <h2>Semana Santa en Atlixco</h2>
+       <br>
+      <p>Iniciando el domingo 20 de marzo y culminando el 27 de marzo, domingo de resurrección. Se celebraron misas, procesiones y confesiones, así lo dio a conocer Lucio Sánchez del Razo, párroco de  la iglesia de San Francisco.
+Ya como es tradicional en la iglesia católica, la semana mayor, la semana santa inicio con el domingo de ramos. Se celebró  o conmemoro  la entrada triunfal de Jesús a Jerusalén, entonces aquí nosotros vamos hacer misas el domingo.
+ En la parroquia de la asunción, se llevó a cabo la bendición de las palmas.
+
+Como cada año también se llevaron  a cabo los ya tradicionales engrillados que recorren las principales calles del municipio de Atlixco con pesadas cadenas y espinas clavadas en el cuerpo. Esto tuvo lugar el día viernes santo a las diez de la mañana, partiendo de la iglesia de la tercera orden.
+
+Es una labor que la iglesia debe apoyar, porque es un acto penitencial el que ellos hacen y para ello se preparan. Creo que es una ofrenda agradable al señor porque es un sacrificio de reconciliación con Dios, pidiéndole perdón por sus pecados y ofreciéndole este acto penitenciario.
+</p>
+<br>
+<center>
+  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Imagen','','imagenes/engrillados.jpg',1)"><img src="imagenes/fotosemanasanta.jpg" width="444" height="332" id="Imagen"></a>
+  <br>
+  <br>
+  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Imagen2','','imagenes/tapete.jpg',1)"><img src="imagenes/fotosemanasanta.jpg" width="444" height="332" id="Imagen2"></a>
+  <br>
+  <br>
+  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image23','','imagenes/atlixco.jpg',1)"><img src="imagenes/fotosemanasanta.jpg" width="444" height="332" id="Image23"></a>
+  <br>
+  <br>
+  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image24','','imagenes/atlixco1.jpg',1)"><img src="imagenes/fotosemanasanta.jpg" width="444" height="332" id="Image24"></a>
+  <br>
+  <br>
+  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image25','','imagenes/atlixco3.jpg',1)"><img src="imagenes/fotosemanasanta.jpg" width="444" height="332" id="Image25"></a>
+</center>
+</div>
+   </div>
+       <div data-role="main" class="ui-content">
+   <div data-role="collapsible" data-content-theme="false">
+     <h1>Mas informacion</h1>
+     <div>
+     <br>
+     <p>"El altar de Dolores”, con motivo de la Semana Santa. Este altar tiene un grado de representación religiosa, con varios elementos simbólicos alusivos a las fechas, digno de admirar no solo por los que profesan la religión católica, sino también por el trabajo artístico de cartonería, cuyo autor es Rodolfo Villena Hernández, artista poblano.
+Con esta propuesta de altar no solo se contribuye a generar un atractivo más; sino que se cumplen con los propósitos de preservar las tradiciones populares culturales en el municipio.</p>
+  </div>
+     </div>
+     </div>
+  <div data-role="footer" data-theme="a">
+      <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+    </div>
+   </div>
+</div>                                                        
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Semana santa en Iztapalapa</h1>
+  </div>
+  <div data-role="content">
+    <div>
+       <p>Iztapalapa, una de las 16 delegaciones que constituyen el Distrito Federal, ha sustituido sus canales, chinampas y trajineras con verduras y flores, por ejes viales y el Metro. Tiene en el Cerro de la Estrella, en sus templos, plazas y jardines de Ia cabecera, los espacios sagrados donde se escenifica cada año la representación ritual por excelencia. La coexistencia de Iztapalapa con la gran urbe, no ha logrado borrar Ias viejas costumbres; sus habitantes renuevan sus lazos de amistad, de compadrazgo y vecindad, de pertenencia e identidad con el barrio y con Ia localidad en las distintas fiestas de su calendario, pero es en la Semana Santa cuando éstos aparecen con mayor fuerza. El Domingo de Ramos, las casas y las calles se llenan de flores, las campanas se echan a vuelo, y un ángel con un niño inician la procesión que avanza lentamente. Los cientos de nazarenos llevan adornos de bandas blancas sobre las túnicas moradas; las vírgenes y las mujeres del pueblo adornan sus cabezas con coronas de flores, la Virgen, la Magdalena, llevan atuendos únicos. Por momentos Iztapalapa se transforma en Jerusalén, la multitud se dirige al barrio de San Lucas para que el sacerdote bendiga las palmas, los ramos de manzanilla, romero y laurel (éstas se guardan, pues la gente les atribuye poderes curativos). Hay risas cuando se reciben en la cara las gotas de agua bendita; en el atrio se mezclan los olores de los puestos de comida, los gritos de los vendedores, la música de los juegos mecánicos: el pueblo mezcla lo bíblico con lo actual.</p>
+       <br>
+       <center>
+       <img src="imagenes/izta.jpg">
+       <br>
+       <br>
+       <br>
+       <img src="imagenes/izta1.jpg" width="400" height="300">
+       <br>
+       <br>
+       <br>
+       <img src="imagenes/iztapalapa.jpg" width="400" height="300">
+       </center>
+    </div>
+    </div>
+  <div data-role="footer" data-theme="a">
+      <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+    </div>
+   </div>
+   </div>
+   <div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Semana santa en el Vaticano</h1>
+   </div>
+   <div data-role="content">
+      <div>
+        <h2></h2></div>
+        <p>El papa Francisco presidirá, la tradicional celebración del domingo de ramos, con la que se inicia la Semana Santa, el tiempo litúrgico más importante para los católicos y que comenzó con el domingo de ramos. 
+El papa argentino presidirá el domingo.</p>
+
+
+<p>Ese día se conmemora cuando Jesús entró triunfalmente en Jerusalén, aclamado como un rey por la gente con ramas y palmas de olivos que cortó de los árboles que se encontraban al lado del camino. 
+Tradicionalmente, el Papa comparte la celebración de ese domingo con los jóvenes, porque fueron justamente los chicos hebreos los que lo recibieron con mayor entusiasmo. </p>
+<p>La Iglesia Católica Apostólica Romana es la iglesia católica de mayor número de creyentes en el mundo, los cuales están bajo la autoridad del Pápa. La semana santa, según la tradición de la Iglesia Católica Romana, comienza con el Domingo de Ramos, fecha en que Jesús entra a Jerusalén y es recibido con hojas de palmeras, y termina con el Sábado Santo. La Pascua comienza después del Sábado Santo.</p>
+
+<p>En el domingo de ramos de 1985, Juan Pablo II dedicó una carta apostólica a los jóvenes y ese mismo año instituyó las Jornadas Mundiales de la Juventud (JMJ), que se realizaron en Roma por primera vez al año siguiente, con la participación de chicos de todo el mundo
+</p>
+<center>
+<img src="imagenes/vaticano.jpg"  width="400" height="300">
+<br>
+<br>
+<br>
+<img src="imagenes/vaticano1.jpg"  width="400" height="300">
+<br>
+<br>
+<br>
+<img src="imagenes/vaticano2.jpg"  width="400" height="300">
+</center>
+      </div>
+      <div data-role="footer" data-theme="a">
+         <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+      </div>
+     </div>
+</div>
+   <div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Semana Santa en Jerusalén</h1>
+  </div>
+  <div data-role="content">
+    <div>
+       <h2>Jerusalén</h2>
+       <p>Oficialmente, Semana Santa comienza al conmemorarse la entrada de Jesús en Jerusalén el Domingo de Ramos (1 de abril), con la misa matinal de las 8 en la Iglesia del Santo Sepulcro y la tradicional procesión de Palmas durante la tarde.
+El Jueves Santo, el Patriarca Latino de Jerusalén celebrará a las 8 de la mañana la Institución de la Eucaristía en el Santo Sepulcro y por la tarde, a las 15.30, los Franciscanos efectuarán su peregrinación tradicional al Cenáculo (la Sala Superior) en el Monte Sion. Por la noche, a partir de las 21 horas, peregrinos y cristianos locales velarán con Jesucristo durante una hora sagrada de meditación en el Huerto de Getsemaní, seguida de una procesión a la luz de velas a la iglesia de San Pedro en Gallicantu, que según la tradición es el lugar en el que Jesús pasó la noche después de ser arrestado.
+En Viernes Santo, a las 8 de la mañana, se conmemorarán la Pasión del Señor y la crucifixión en el Calvario, seguidas del Vía Crucis en la Vía Dolorosa a las 11.30, liderado por el Custos (Custodio) franciscano de Tierra Santa.  Posteriormente, a las 8.10 de la mañana, se celebrará el funeral de Cristo en el Sepulcro, un evento exclusivo de la Iglesia de Jerusalén, que reconstruye la deposición del cuerpo de Cristo en la tumba.
+La tan esperada Vigilia Pascual, el punto culminante de la semana, se celebrará el sábado a las 7.30 de la mañana en la Basílica de la Resurrección, seguida de la entrada solemne del Patriarca a las 15.30 y e oficios religiosos vespertinos a las 18 horas.El Domingo de Resurrección, se celebrará una misa a las 8 de la mañana, con una procesión alrededor de la tumba de Jesús y la procesión diaria, que tendrá lugar a las 17 horas.Finalmente, el Lunes de Pascua, se conmemorará el encuentro de Jesús con los dos discípulos en el camino a Emaús, con la celebración de una misa en el Santo Sepulcro a las 8 de la mañana y también otra oficiada por el Custos (Custodio) en Emaús a las 10.
+</p>
+<br>
+<center>
+<img src="imagenes/jerusalen.jpg" width="400" height="300">
+<br>
+<br>
+<br>
+<img src="imagenes/jerusalen1.jpg" width="400" height="300">
+<br>
+<br>
+<br>
+<img src="imagenes/jerusalen2.jpg" width="400" height="300">
+</center>
+    </div>
+    </div>
+  <div data-role="footer" data-theme="a">
+      <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+    </div>
+   </div>
+   </div>
+   <div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+      <h1>Semana Santa en Chihuahua y los Tarahumaras</h1>
+  </div>
+  <div data-role="content">
+    <div>
+       <h2>Chihuahua y los tarahumaras</h2>
+       <p>Los tarahumaras también celebran la Semana Santa. Hay dos fiestas religiosas vinculadas con Jesucristo: la conocida como tiempo de la Natividad del Señor y la Pasión y muerte de Jesús, la cual se inicia con el Carnaval, sigue con el Miércoles de Ceniza, la Cuaresma y la Semana Santa. Tal es el comienzo de la Semana Mayor, la cual se conmemora de diferentes maneras a lo largo y ancho del país, dentro de un diálogo en el que se conjugan la visión católica con los elementos sagrados de los pueblos prehispánicos, con lo que se ha construido tan solo desde dos perspectivas: la mestiza y la indígena, "a partir de fundamentos religiosos comunes", se especifica en el libro La Semana Santa en México. Con la muerte en la cruz. En las comunidades indígenas, donde el mestizaje se refleja en cada una de sus celebraciones religiosas, todo lo vinculado con la Pasión y muerte de Jesús adquiere características muy especiales, donde se funden tanto la presencia católica, como las costumbres heredadas desde tiempos prehispánicos. Así, por ejemplo, en el asentamiento tarahumara denominado “La Soledad” su Gobernador indígena Liborio Carrillo, aseguro que esta tradición comienza desde el miércoles con pintos danzantes, en donde jóvenes bailan al ritmo de un tambor a lo largo del día. Dentro de este grupo de baile tarahumara, también hay personas que lo dirigen, en donde por lo general, recorren varias cuadras a la redonda danzando, para concluir con una misa dependiendo el día, en donde los participantes durante la danza se comunican con Dios, la naturaleza y la Virgen. Asimismo, el Gobernador informó que los Tarahumaras tienen su propia versión de la Pasión y Muerte de Jesús, expresada en la costumbre de pintarse el cuerpo con colores sagrados tales como el negro, el blanco y, principalmente, el rojo.
+Juan Hernández Cordero un tarahumara que se le encomienda dirigir las danzas, nos explica que muchos de los jóvenes “pintos” que son los que bailan todo el día, algunos son de deferentes zonas serranas de la sierra de Chihuahua, por ello no hablan español y el funge como traductor dependiendo la danza que estén interpretando.
+También dentro de las creencias de los tarahumaras, la comida que se consume en estos días, tiene su significado, ya que no se consume carne roja y solo blanca y platillos especiales como, chacales, torrejas, nopales en chile colorado, ensalada, espagueti, pescados y algunos otros. Por su parte, Fernando Legarreta joven misionera, llevó un año llevando la palabra del señor hacia esta comunidad que se ubica a las espaldas del Cerro Grande, en donde comenta que esta semana es muy importante en la religión católica.
+Acompañado por varios jóvenes misioneros Fernando oficializa la misa en donde brinda el mensaje según el día y les explica a los tarahumaras el significado y el porqué de la Semana Santa.</p>
+<center>
+<img src="imagenes/tarahumaras1.jpg" width="400" height="300">
+<br>
+<br>
+<br>
+<img src="imagenes/tarahumara.jpg" width="400" height="300" >
+<br>
+<br>
+<br>
+<img src="imagenes/tarahumaras.jpg">
+</center>
+    </div>
+    </div>
+  <div data-role="footer" data-theme="a">
+      <h4>Aplicacion dos, Loreli Ponce Ayala</h4>
+    </div>
+   </div>
+   </div>
+</div>
+</body>
+</html>	
